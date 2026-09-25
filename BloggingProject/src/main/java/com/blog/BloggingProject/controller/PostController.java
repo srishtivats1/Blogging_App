@@ -37,6 +37,12 @@ public class PostController {
         model.addAttribute("post", post);
         return "edit_post";
     }
+    @GetMapping("/post/{id}")
+    public String viewPost(@PathVariable Long id, Model model) {
+        Post post = repo.findById(id).orElse(null);
+        model.addAttribute("post", post);
+        return "view_post";
+    }
 
     @PostMapping("/update")
     public String updatePost(Post post) {

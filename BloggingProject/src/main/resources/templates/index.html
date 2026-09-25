@@ -74,6 +74,10 @@
 
 
                         <td>
+                            <a th:href="@{'/post/' + ${post.id}}"
+                               class="btn btn-sm btn-info">
+                                View
+                            </a>
 
                             <a th:href="@{'/edit/' + ${post.id}}"
                                class="btn btn-sm btn-warning me-2">
